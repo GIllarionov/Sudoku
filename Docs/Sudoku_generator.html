@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Sudoku_generator</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Sudoku_generator</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cillar%5Cpycharmprojects%5Csudoku%5Csudoku_generator.py">c:\users\illar\pycharmprojects\sudoku\sudoku_generator.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="random.html">random</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-checking"><strong>checking</strong></a>(grid)</dt><dd><tt>Проверяет&nbsp;верно&nbsp;ли&nbsp;заполнен&nbsp;квадрат.<br>
+Если&nbsp;верно,&nbsp;возвращает&nbsp;True,&nbsp;иначе&nbsp;-&nbsp;координаты&nbsp;последней&nbsp;по&nbsp;счету&nbsp;найденной&nbsp;ошибки&nbsp;и&nbsp;код&nbsp;ошибки<br>
+0&nbsp;-&nbsp;неверно&nbsp;заполнена&nbsp;строка<br>
+1&nbsp;-&nbsp;неверно&nbsp;заполнен&nbsp;столбец<br>
+2&nbsp;-&nbsp;неверно&nbsp;заполнен&nbsp;малый&nbsp;квадрат<br>
+3&nbsp;-&nbsp;в&nbsp;ячейке&nbsp;нет&nbsp;значения</tt></dd></dl>
+ <dl><dt><a name="-crossed"><strong>crossed</strong></a>(x, y, size, grid)</dt><dd><tt>Определяет,&nbsp;какие&nbsp;элементы&nbsp;находятся&nbsp;в&nbsp;одной&nbsp;строке,&nbsp;столбце,&nbsp;малом&nbsp;квадрате&nbsp;с&nbsp;данной&nbsp;клеткой<br>
+:param<br>
+x&nbsp;-&nbsp;координата&nbsp;по&nbsp;вертикали<br>
+y&nbsp;-&nbsp;координата&nbsp;по&nbsp;горизонтали<br>
+size&nbsp;-&nbsp;размер&nbsp;малых&nbsp;квадратов<br>
+grid&nbsp;-&nbsp;таблица&nbsp;с&nbsp;судоку</tt></dd></dl>
+ <dl><dt><a name="-crossedlc"><strong>crossedlc</strong></a>(x, y, size, x1, y1, grid)</dt><dd><tt>Находит&nbsp;числа,&nbsp;находящиеся&nbsp;в&nbsp;одной&nbsp;строке&nbsp;или&nbsp;столбце&nbsp;с&nbsp;заданным,&nbsp;не&nbsp;учитывая&nbsp;указанную&nbsp;клетку<br>
+:param<br>
+x,&nbsp;y&nbsp;-&nbsp;координаты&nbsp;числа<br>
+size&nbsp;-&nbsp;размер&nbsp;малого&nbsp;кадрата<br>
+x1,&nbsp;y1&nbsp;&nbsp;-&nbsp;координаты&nbsp;не&nbsp;учитываемого&nbsp;числа<br>
+grid&nbsp;-&nbsp;таблица&nbsp;с&nbsp;судоку</tt></dd></dl>
+ <dl><dt><a name="-generate"><strong>generate</strong></a>(size: int, difficulty: int)</dt><dd><tt>Создает&nbsp;случайное&nbsp;судоку&nbsp;заданного&nbsp;размера&nbsp;и&nbsp;сложности</tt></dd></dl>
+ <dl><dt><a name="-line_area_swap"><strong>line_area_swap</strong></a>(grid: list, area1: int, area2: int)</dt><dd><tt>Меняет&nbsp;местами&nbsp;две&nbsp;строки&nbsp;из&nbsp;малых&nbsp;квадратов<br>
+:param<br>
+grid&nbsp;-&nbsp;таблица&nbsp;с&nbsp;судоку<br>
+area1&nbsp;-&nbsp;номер&nbsp;первой&nbsp;строки<br>
+area2&nbsp;-&nbsp;номер&nbsp;второй&nbsp;строки</tt></dd></dl>
+ <dl><dt><a name="-line_swap"><strong>line_swap</strong></a>(grid: list, area: int, l1: int, l2: int)</dt><dd><tt>Меняет&nbsp;местами&nbsp;две&nbsp;строки&nbsp;в&nbsp;зоне<br>
+:param<br>
+grid&nbsp;-&nbsp;таблица&nbsp;с&nbsp;судоку<br>
+area&nbsp;-&nbsp;порядковый&nbsp;номер&nbsp;строки&nbsp;из&nbsp;малых&nbsp;квадратов<br>
+l1&nbsp;-&nbsp;номер&nbsp;первой&nbsp;строки<br>
+l2&nbsp;-&nbsp;номер&nbsp;второй&nbsp;строки</tt></dd></dl>
+ <dl><dt><a name="-lonely"><strong>lonely</strong></a>(x, y, size, grid)</dt><dd><tt>Проверяет,&nbsp;является&nbsp;ли&nbsp;число&nbsp;в&nbsp;указанная&nbsp;клетка&nbsp;единственно&nbsp;возможной&nbsp;позицией&nbsp;в&nbsp;данном&nbsp;квадрате&nbsp;для&nbsp;числа,<br>
+стоящего&nbsp;в&nbsp;ней<br>
+:param<br>
+x,&nbsp;y&nbsp;-&nbsp;координаты&nbsp;клетки<br>
+size&nbsp;-&nbsp;размер&nbsp;малого&nbsp;квадрата<br>
+grid&nbsp;-&nbsp;таблица&nbsp;с&nbsp;судоку</tt></dd></dl>
+ <dl><dt><a name="-randomize_grid"><strong>randomize_grid</strong></a>(grid)</dt><dd><tt>Перемешивает&nbsp;таблицу&nbsp;с&nbsp;судоку&nbsp;случайным&nbsp;образом,&nbsp;сохраняя&nbsp;её&nbsp;правильность</tt></dd></dl>
+ <dl><dt><a name="-transposing"><strong>transposing</strong></a>(grid: list)</dt><dd><tt>Транспонирует&nbsp;матрицу</tt></dd></dl>
+</td></tr></table>
+</body></html>
